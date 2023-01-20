@@ -1,0 +1,26 @@
+.haedr-haedr {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  padding: var(--dl-space-space-halfunit);
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #457B9D;
+}
+.haedr-text {
+  color: rgb(241, 250, 238);
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.haedr-link {
+  display: contents;
+}
+.haedr-icon {
+  fill: #F1FAEE;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+}

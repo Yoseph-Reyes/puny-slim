@@ -1,0 +1,20 @@
+3
+https://saia2.psm.edu.ve/login/index.php
+pruebad
+prueBAD
+una pruebita ams
+ input text
+Input Text
+username
+yoseph
+ input password
+Input Password
+password
+clave
+ button submit
+Click Element
+loginbtn
+ 
+ 
+Page Should Contain
+" Las Cookies deben estar habilitadas en su navegador"

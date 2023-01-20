@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login - Puny Slim Chicken</title>
+    <meta property="og:title" content="Login - Puny Slim Chicken" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="../static/styles/style.css" />
+  </head>
+  <body>
+    <div>
+      <script src="../static/js/login.js"></script>
+      <link href="../static/styles/login.css" rel="stylesheet" />
+
+      <div class="login-container">
+        <div class="login-container1">
+          <div class="login-haedr">
+            <span class="login-text">
+              <span>Aplicación</span>
+              <br />
+            </span>
+          </div>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <span><strong>{{ message }}</strong></span>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <div class="login-container2">
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fGRvZ3xlbnwwfHx8fDE2NjY1NDk2OTc&amp;ixlib=rb-4.0.3&amp;w=800"
+              class="login-image"
+            />
+            <div class="login-container3">
+              <h1 class="login-text03">Aplicación</h1>
+              <form class="login-form" action="/" method="post">
+                <div class="login-container4">
+                  <input type="Usuario" required placeholder="Usuario" class="login-textinput input"
+                    name = "user"
+                    id="user"
+                  />
+                  <input
+                    type="password"
+                    name="passw"
+                    required
+                    placeholder="Contraseña"
+                    class="login-textinput1 input" 
+                    id="passw"
+                  />
+                  <div class="login-container5">
+                    <button class="login-link button">
+                      <span class="login-text04">
+                        <span>Iniciar Sesión</span>
+                        <br />
+                      </span>
+                    </button>
+                    <a
+                      href="/registro"
+                      rel="noreferrer noopener"
+                      class="login-link1 button"
+                    >
+                      <span class="login-text07">
+                        <span>Registrarse</span>
+                        <br />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <a
+                  href="/usuario"
+                  rel="noreferrer noopener"
+                  class="login-link2 button"
+                >
+                  <span class="login-text10">
+                    <span>Olvidaste tu Contraseña</span>
+                    <br />
+                  </span>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>

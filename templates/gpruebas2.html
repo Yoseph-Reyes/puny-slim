@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gestor de Pruebas - Puny Slim Chicken</title>
+    <meta property="og:title" content="Gestor-de-Pruebas - Puny Slim Chicken" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../static/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="../static/js/login.js"></script>
+    <script src="../static/js/gpscript2.js"></script>
+  </head>
+  <body>
+    <div>
+      <link href="../static/styles/gestor-de-pruebas.css" rel="stylesheet" />
+
+      <div class="gestor-de-pruebas-container">
+        <div class="gestor-de-pruebas-container01">
+          <div class="haedr-haedr">
+            <span class="haedr-text">
+              <span>Aplicación</span>
+              <br />
+            </span>
+            <a href="/usuario" rel="noreferrer noopener" class="haedr-link">
+              <div class="haedr-container">
+                <span class="haedr-text3">{{session['user']}}</span>
+                <svg viewBox="0 0 1024 1024" class="haedr-icon">
+                  <path
+                    d="M512 0c282.857 0 512 229.143 512 512 0 281.143-228 512-512 512-283.429 0-512-230.286-512-512 0-282.857 229.143-512 512-512zM865.714 772c53.143-73.143 85.143-162.857 85.143-260 0-241.714-197.143-438.857-438.857-438.857s-438.857 197.143-438.857 438.857c0 97.143 32 186.857 85.143 260 20.571-102.286 70.286-186.857 174.857-186.857 46.286 45.143 109.143 73.143 178.857 73.143s132.571-28 178.857-73.143c104.571 0 154.286 84.571 174.857 186.857zM731.429 402.286c0-121.143-98.286-219.429-219.429-219.429s-219.429 98.286-219.429 219.429 98.286 219.429 219.429 219.429 219.429-98.286 219.429-219.429z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+          {% with messages = get_flashed_messages() %} {% if messages %} {% for
+          message in messages %}
+          <div
+            class="alert alert-success alert-dismissible fade show"
+            role="alert"
+          >
+            <span><strong>{{ message }}</strong></span>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %} {% endif %} {% endwith %}
+          <div class="gestor-de-pruebas-container02">
+            <div class="side-bar-side-bar">
+              <ul class="side-bar-ul list">
+                <a href="/inicio" rel="noreferrer noopener">
+                  <li class="side-bar-li list-item">
+                    <div class="side-bar-container">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon">
+                        <path
+                          d="M426 854h-212v-342h-128l426-384 426 384h-128v342h-212v-256h-172v256z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text"><span>Inicio</span></span>
+                    </div>
+                  </li>
+                </a>
+                <a href="/scrapper" rel="noreferrer noopener">
+                  <li class="side-bar-li1 list-item">
+                    <div class="side-bar-container1">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon02">
+                        <path
+                          d="M854 768v-384h-172v384h172zM640 554v-170h-470v170h470zM640 768v-170h-470v170h470zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text1"
+                        ><span>Web Scrapper</span></span
+                      >
+                    </div>
+                  </li>
+                </a>
+                <a href="/pruebas" rel="noreferrer noopener">
+                  <li class="side-bar-li2 list-item">
+                    <div class="side-bar-container2">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon04">
+                        <path
+                          d="M956.29 804.482l-316.29-527.024v-213.458h32c17.6 0 32-14.4 32-32s-14.4-32-32-32h-320c-17.6 0-32 14.4-32 32s14.4 32 32 32h32v213.458l-316.288 527.024c-72.442 120.734-16.512 219.518 124.288 219.518h640c140.8 0 196.73-98.784 124.29-219.518zM241.038 640l206.962-344.938v-231.062h128v231.062l206.964 344.938h-541.926z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text2"
+                        ><span>Gestor de Pruebas</span></span
+                      >
+                    </div>
+                  </li>
+                </a>
+                <a href="/historial" rel="noreferrer noopener">
+                  <li class="side-bar-li3 list-item">
+                    <div class="side-bar-container3">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon06">
+                        <path
+                          d="M487.339 298.667l94.848-164.267c77.867 14.379 147.499 52.267 201.344 106.069 17.749 17.749 33.792 37.248 47.829 58.197h-221.611zM314.88 426.667l-94.805-164.139c6.528-7.637 13.312-14.976 20.395-22.059 64-64 150.4-105.472 246.4-111.659l-110.592 191.573zM339.541 640h-189.696c-14.165-40.021-21.845-83.115-21.845-128 0-61.013 14.208-118.656 39.509-169.899l110.933 192.171zM745.515 489.728l-61.056-105.728h189.696c14.165 40.021 21.845 83.115 21.845 128 0 61.013-14.208 118.656-39.509 169.899l-109.909-190.379zM537.088 895.189l172.032-297.856 94.805 164.181c-6.528 7.595-13.312 14.976-20.395 22.016-64 64-150.4 105.472-246.4 111.659zM456.533 978.091c1.963 0.341 3.925 0.597 5.931 0.64 16.256 1.707 32.811 2.603 49.536 2.603 129.579 0 246.997-52.565 331.861-137.472 15.616-15.616 30.123-32.299 43.392-49.963 1.792-2.005 3.371-4.139 4.693-6.357 56.235-77.355 89.387-172.629 89.387-275.541 0-65.664-13.525-128.213-37.888-185.003-0.683-1.877-1.451-3.669-2.347-5.376-23.595-53.077-56.747-100.992-97.237-141.483-72.576-72.576-168.96-121.557-276.395-134.229-1.963-0.341-3.925-0.597-5.931-0.64-16.256-1.707-32.811-2.603-49.536-2.603-129.579 0-246.997 52.565-331.861 137.472-15.616 15.573-30.123 32.299-43.392 49.963-1.792 2.005-3.371 4.139-4.736 6.357-56.192 77.355-89.344 172.629-89.344 275.541 0 65.664 13.525 128.213 37.888 185.003 0.683 1.877 1.451 3.669 2.347 5.376 23.595 53.077 56.747 100.992 97.237 141.483 72.576 72.576 168.96 121.557 276.395 134.229zM536.661 725.333l-94.848 164.267c-77.867-14.379-147.499-52.267-201.344-106.069-17.749-17.749-33.792-37.248-47.829-58.197h221.611zM659.84 512l-73.899 128h-147.883l-73.899-128 73.899-128h147.883z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text3"><span>Historial</span></span>
+                    </div>
+                  </li>
+                </a>
+                {% if session['admin'] == 1 %}
+                    <a
+                    href="/admin"
+                    
+                    rel="noreferrer noopener"
+                  >
+                    <li class="side-bar-li3 list-item">
+                      <div class="side-bar-container3">
+                        <svg viewBox="0 0 1024 1024" class="side-bar-icon">
+                          <path
+                  d="M512 384q52 0 90 38t38 90-38 90-90 38-90-38-38-90 38-90 90-38zM512 726q88 0 151-63t63-151-63-151-151-63-151 63-63 151 63 151 151 63zM512 192q158 0 286 88t184 232q-56 144-184 232t-286 88-286-88-184-232q56-144 184-232t286-88z"
+                ></path>
+                        </svg>
+                        <span class="side-bar-text3">
+                          <span>Panel de Administrador</span>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                {% endif %}
+                <a href="/logout" rel="noreferrer noopener">
+                  <li class="side-bar-li4 list-item">
+                    <div class="side-bar-container4">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon08">
+                        <path
+                          d="M170 214v596h342v86h-342q-34 0-59-26t-25-60v-596q0-34 25-60t59-26h342v86h-342zM726 298l212 214-212 214-60-62 110-110h-434v-84h434l-110-112z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text4"><span>Salir</span></span>
+                    </div>
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="gestor-de-pruebas-container03">
+              <div class="gestor-de-pruebas-container04">
+                <h1 class="gestor-de-pruebas-text">Gestor de Pruebas</h1>
+              </div>
+              <form
+                action="/pruebas"
+                method="post"
+                class="gestor-de-pruebas-form"
+              >
+                <div class="gestor-de-pruebas-container05">
+                  <div class="gestor-de-pruebas-container06">
+
+                    <input
+                      type="hidden"
+                      name="contador"
+                      id="contador"
+                      value="
+                      {% if not lista[0] == None  %}
+                        	{{ lista[1]}}
+                      {% else %}
+                        0
+                      {% endif %}
+                      "
+                    />
+                    <label class="gestor-de-pruebas-text01x">
+                      Introduce la URL a Verificar
+                    </label>
+                    <label class="gestor-de-pruebas-text02x">
+                      Nombre del Archivo
+                    </label>
+                    <label class="gestor-de-pruebas-text03x">
+                      Titulo de la Prueba
+                    </label>
+                    <label class="gestor-de-pruebas-text04x">
+                      <span>Documentación</span>
+                      <br />
+                    </label>
+                    <input
+                      type="url"
+                      required
+                      placeholder="Ej: https://saia2.psm.edu.ve/login/index.php"
+                      class="gestor-de-pruebas-textinput input"
+                      name="url"
+                      id="url"
+                      value="{{lista[0]}}"
+                      data-toggle="tooltip" data-placement="top" title="En este campo se debe introducir la url a la cual se le va a realizar la prueba"
+                    />
+
+                   <input
+                   type="hidden"
+                   name="param"
+                   id="param"
+                   value="{{lista}}"
+                 />                    
+                    <button class="gestor-de-pruebas-button button">
+                      Verificar URL
+                    </button>
+                  </div>
+                  <div class="gestor-de-pruebas-container07">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="Ej: Prueba"
+                      class="gestor-de-pruebas-textinput1 input"
+                      data-toggle="tooltip" data-placement="top" title="Este campo sirve para identificar el nombre del archivo que va a generar la prueba automatizada"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      id="title"
+                      name="title"
+                      required
+                      placeholder="Ej: Prueba Automatizada de la Pagina Saia"
+                      class="gestor-de-pruebas-textinput2 input"
+                      data-toggle="tooltip" data-placement="top" title="Este campo sirve para identificar el nombre de de prueba a realizar con fines de documentación de la misma"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <textarea
+                  id="doc"
+                  name="doc"
+                  placeholder="Ej: Esta prueba se realiza para verificar que sucede si se introducen datos incorrectos en el formulario"
+                  class="gestor-de-pruebas-textarea textarea"
+                  
+                  data-toggle="tooltip" data-placement="top" title="Este campo se utiliza para describir que va a realizar la prueba a ejecutar"
+                ></textarea>
+                <div class="gestor-de-pruebas-container08">
+                  <span  class="gestor-de-pruebas-text01">
+                    <span class="gestor-de-pruebas-text02" onclick="addRow()"
+                    data-toggle="tooltip" data-placement="top" title=" Recuerda que puedes incluir un maximo de 10 reglas solamente"
+                      >Añadir
+                    </span>
+                  </span>
+                </div>
+                <div class="gestor-de-pruebas-container09">
+                  <div class="gestor-de-pruebas-head">
+                    <span class="gestor-de-pruebas-text04"
+                      >Tipo de Elemento</span
+                    >
+                    <span class="gestor-de-pruebas-text05">ID</span>
+                    <span class="gestor-de-pruebas-text06">
+                      <span>Accion</span>
+                      <br />
+                    </span>
+                    <span class="gestor-de-pruebas-text09">
+                      <span>Variable</span>
+                      <br />
+                    </span>
+                  </div>
+                  <div class="gestor-de-pruebas-container10">
+                    <input
+                      type="text"
+                      id="obj0"
+                      name="obj0"
+                      placeholder="Ej: Campo de Texto"
+                      class="gestor-de-pruebas-textinput3 input"
+                      data-toggle="tooltip" data-placement="bottom" title="Este campo se utiliza para especificar que tipo de elemento estas introduciendo"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      id="id0"
+                      name="id0"
+                      placeholder="Ej: idcampotexto"
+                      class="gestor-de-pruebas-textinput4 input"
+                      data-toggle="tooltip" data-placement="bottom" title="Este campo se emplea para introducir el id de elemento objetivo, recuerda que debe ser unico y no puede contener espacios"
+                      value=""
+                    />
+                    <select
+                      class="gestor-de-pruebas-select"
+                      name="accion0"
+                      id="accion0"
+                      data-toggle="tooltip" data-placement="bottom" title="Utilize este campo para seleccionar la accion que va a realizar el robot el en elemento objetivo"
+                      >
+                      <option value="Input Text" Selected>Introducir Texto</option>
+                      <option value="Input Password">Introducir Contraseña</option>
+                      <option value="Click Element">Hacer clic en</option>
+                      <option value="Select From List By Label" > Seleccionar elemento de la lista</option>
+                                      
+                    </select>
+                    <input
+                      type="text"
+                      id="var0"
+                      name="var0"
+                      placeholder='Ej: Escribe "Hola Mundo" '
+                      class="gestor-de-pruebas-textinput5 input"
+                      data-toggle="tooltip" data-placement="top" title='Este campo sirve para especificar que deberia hacer el robot en el elemento objetivo, es importante mencionar que el mismo sera ignorado si es utilizado junto a la regla "Hacer clic en"'
+                      value=""
+                    />
+                    <span  class="gestor-de-pruebas-text12"  onclick=remove()>-</span>
+                  </div>
+                  <div class="reglas" id="reglas">
+                  </div>
+                </div>
+                <div class="gestor-de-pruebas-container11">
+                  <div class="gestor-de-pruebas-head1">
+                    <span class="gestor-de-pruebas-text13">
+                      <span>Resultado esperado</span>
+                      <br />
+                    </span>
+                  </div>
+                  <div class="gestor-de-pruebas-container12">
+                    <input
+                      type="text"
+                      id="objres"
+                      name="objres"
+                      placeholder="Resultado"
+                      class="gestor-de-pruebas-textinput6 input"
+                      data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"
+                    />
+                    <select
+                      class="gestor-de-pruebas-select1"
+                      name="accionres"
+                      id="accionres"
+                      data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"
+                    >
+                    <option value="Page Should Contain" selected> La Pagina debe Contener</option>
+                      <option value="Element Text Should Be"> El texto en el elemento debe ser</option>
+                      <option value="Element Should Be Visible"> El elemento debe ser visible</option>
+                    
+                    </select>
+                    <input
+                      type="text"
+                      id="idres"
+                      name="idres"
+                      placeholder="ID  Resultado"
+                      class="gestor-de-pruebas-textinput7 input"
+                      data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      id="varres"
+                      name="varres"
+                      placeholder="Variable de Resultado"
+                      class="gestor-de-pruebas-textinput8 input"
+                      data-toggle="tooltip" data-placement="bottom" title="Tooltip on top"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

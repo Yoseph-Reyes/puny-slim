@@ -1,0 +1,16 @@
+3
+https://saia2.psm.edu.ve/login/index.php
+Pruebaff
+Prueba
+Prueba de Saia
+text
+Input Text
+username  yoseph
+password
+Input Password
+password  clave
+submit
+Click Element
+loginbtn
+ Page Should Contain
+Las 'Cookies' deben estar habilitadas en su navegador 

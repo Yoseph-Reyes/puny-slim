@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Puny Slim Chicken</title>
+    <meta property="og:title" content="Puny Slim Chicken" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="../static/styles/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="../static/js/login.js"></script>
+  </head>
+  <body>
+    <div>
+      <link href="../static/styles/inicio.css" rel="stylesheet" />
+
+      <div class="inicio-container">
+        <div class="inicio-container1">
+          <div class="haedr-haedr haedr-root-class-name">
+            <span class="haedr-text">
+              <span>Aplicación</span>
+              <br />
+            </span>
+            <a
+              href="/usuario"
+              rel="noreferrer noopener"
+              class="haedr-link"
+            >
+              <div class="haedr-container">
+                <span class="haedr-text3">{{session['user']}}</span>
+                <svg viewBox="0 0 1024 1024" class="haedr-icon">
+                  <path
+                    d="M512 0c282.857 0 512 229.143 512 512 0 281.143-228 512-512 512-283.429 0-512-230.286-512-512 0-282.857 229.143-512 512-512zM865.714 772c53.143-73.143 85.143-162.857 85.143-260 0-241.714-197.143-438.857-438.857-438.857s-438.857 197.143-438.857 438.857c0 97.143 32 186.857 85.143 260 20.571-102.286 70.286-186.857 174.857-186.857 46.286 45.143 109.143 73.143 178.857 73.143s132.571-28 178.857-73.143c104.571 0 154.286 84.571 174.857 186.857zM731.429 402.286c0-121.143-98.286-219.429-219.429-219.429s-219.429 98.286-219.429 219.429 98.286 219.429 219.429 219.429 219.429-98.286 219.429-219.429z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <span><strong>{{ message }}</strong></span>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <div class="inicio-container2">
+            <div class="side-bar-side-bar">
+              <ul class="side-bar-ul list">
+                <a
+                  href="/inicio"
+                  
+                  rel="noreferrer noopener"
+                >
+                  <li class="side-bar-li list-item">
+                    <div class="side-bar-container">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon">
+                        <path
+                          d="M426 854h-212v-342h-128l426-384 426 384h-128v342h-212v-256h-172v256z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text"><span>Inicio</span></span>
+                    </div>
+                  </li>
+                </a>
+                <a
+                  href="/scrapper"
+                  
+                  rel="noreferrer noopener"
+                >
+                  <li class="side-bar-li1 list-item">
+                    <div class="side-bar-container1">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon2">
+                        <path
+                          d="M854 768v-384h-172v384h172zM640 554v-170h-470v170h470zM640 768v-170h-470v170h470zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text1">
+                        <span>Web Scrapper</span>
+                      </span>
+                    </div>
+                  </li>
+                </a>
+                <a
+                  href="/pruebas"
+                  
+                  rel="noreferrer noopener"
+                >
+                  <li class="side-bar-li2 list-item">
+                    <div class="side-bar-container2">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon4">
+                        <path
+                          d="M956.29 804.482l-316.29-527.024v-213.458h32c17.6 0 32-14.4 32-32s-14.4-32-32-32h-320c-17.6 0-32 14.4-32 32s14.4 32 32 32h32v213.458l-316.288 527.024c-72.442 120.734-16.512 219.518 124.288 219.518h640c140.8 0 196.73-98.784 124.29-219.518zM241.038 640l206.962-344.938v-231.062h128v231.062l206.964 344.938h-541.926z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text2">
+                        <span>Pruebas</span>
+                      </span>
+                    </div>
+                  </li>
+                </a>
+                <a
+                  href="/historial"
+                  
+                  rel="noreferrer noopener"
+                >
+                  <li class="side-bar-li3 list-item">
+                    <div class="side-bar-container3">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon">
+                        <path
+                          d="M487.339 298.667l94.848-164.267c77.867 14.379 147.499 52.267 201.344 106.069 17.749 17.749 33.792 37.248 47.829 58.197h-221.611zM314.88 426.667l-94.805-164.139c6.528-7.637 13.312-14.976 20.395-22.059 64-64 150.4-105.472 246.4-111.659l-110.592 191.573zM339.541 640h-189.696c-14.165-40.021-21.845-83.115-21.845-128 0-61.013 14.208-118.656 39.509-169.899l110.933 192.171zM745.515 489.728l-61.056-105.728h189.696c14.165 40.021 21.845 83.115 21.845 128 0 61.013-14.208 118.656-39.509 169.899l-109.909-190.379zM537.088 895.189l172.032-297.856 94.805 164.181c-6.528 7.595-13.312 14.976-20.395 22.016-64 64-150.4 105.472-246.4 111.659zM456.533 978.091c1.963 0.341 3.925 0.597 5.931 0.64 16.256 1.707 32.811 2.603 49.536 2.603 129.579 0 246.997-52.565 331.861-137.472 15.616-15.616 30.123-32.299 43.392-49.963 1.792-2.005 3.371-4.139 4.693-6.357 56.235-77.355 89.387-172.629 89.387-275.541 0-65.664-13.525-128.213-37.888-185.003-0.683-1.877-1.451-3.669-2.347-5.376-23.595-53.077-56.747-100.992-97.237-141.483-72.576-72.576-168.96-121.557-276.395-134.229-1.963-0.341-3.925-0.597-5.931-0.64-16.256-1.707-32.811-2.603-49.536-2.603-129.579 0-246.997 52.565-331.861 137.472-15.616 15.573-30.123 32.299-43.392 49.963-1.792 2.005-3.371 4.139-4.736 6.357-56.192 77.355-89.344 172.629-89.344 275.541 0 65.664 13.525 128.213 37.888 185.003 0.683 1.877 1.451 3.669 2.347 5.376 23.595 53.077 56.747 100.992 97.237 141.483 72.576 72.576 168.96 121.557 276.395 134.229zM536.661 725.333l-94.848 164.267c-77.867-14.379-147.499-52.267-201.344-106.069-17.749-17.749-33.792-37.248-47.829-58.197h221.611zM659.84 512l-73.899 128h-147.883l-73.899-128 73.899-128h147.883z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text3">
+                        <span>Historial</span>
+                      </span>
+                    </div>
+                  </li>
+                </a>
+                {% if session['admin'] == 1 %}
+                <a
+                href="/admin"
+                
+                rel="noreferrer noopener"
+              >
+                <li class="side-bar-li3 list-item">
+                  <div class="side-bar-container3">
+                    <svg viewBox="0 0 1024 1024" class="side-bar-icon">
+                      <path
+              d="M512 384q52 0 90 38t38 90-38 90-90 38-90-38-38-90 38-90 90-38zM512 726q88 0 151-63t63-151-63-151-151-63-151 63-63 151 63 151 151 63zM512 192q158 0 286 88t184 232q-56 144-184 232t-286 88-286-88-184-232q56-144 184-232t286-88z"
+            ></path>
+                    </svg>
+                    <span class="side-bar-text3">
+                      <span>Panel de Administrador</span>
+                    </span>
+                  </div>
+                </li>
+              </a>
+            {% endif %}
+                <a
+                href="/logout"
+                rel="noreferrer noopener"
+              >
+                  <li class="side-bar-li3 list-item">
+                    <div class="side-bar-container3">
+                      <svg viewBox="0 0 1024 1024" class="side-bar-icon4">
+                        <path
+                          d="M170 214v596h342v86h-342q-34 0-59-26t-25-60v-596q0-34 25-60t59-26h342v86h-342zM726 298l212 214-212 214-60-62 110-110h-434v-84h434l-110-112z"
+                        ></path>
+                      </svg>
+                      <span class="side-bar-text3">
+                        <span>Salir</span>
+                      </span>
+                    </div>
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="inicio-container3">
+              <div class="inicio-container4">
+                <div class="inicio-container5">
+                  <span class="inicio-text">Web Scrapper</span>
+                  <img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE0fHx3ZWJ8ZW58MHx8fHwxNjcyMjUzMzM0&amp;ixlib=rb-4.0.3&amp;h=700"
+                    class="inicio-image"
+                  />
+                  <a href="/scrapper" class="inicio-link button">
+                    Nueva Tarea
+                  </a>
+                </div>
+                <div class="inicio-container6">
+                  <span class="inicio-text01">Gestor de Pruebas</span>
+                  <img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDMxfHxjb21wdXRlcnxlbnwwfHx8fDE2NzIyNTMzOTg&amp;ixlib=rb-4.0.3&amp;h=700"
+                    class="inicio-image1"
+                  />
+                  <a href="/pruebas" class="inicio-link1 button">
+                    Nueva Tarea
+                  </a>
+                </div>
+                <div class="inicio-container7">
+                  <span class="inicio-text02">Historial</span>
+                  <img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDN8fGhpc3Rvcnl8ZW58MHx8fHwxNjcyMjUzNDIz&amp;ixlib=rb-4.0.3&amp;w=400"
+                    class="inicio-image2"
+                  />
+                  <a href="/historial" class="inicio-link2 button">
+                    <span>
+                      <span class="inicio-text04">Ingresar</span>
+                      <br />
+                    </span>
+                  </a>
+                  <span class="inicio-text06">
+                    <span>Usuario</span>
+                    <br />
+                  </span>
+                  <img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1599658880436-c61792e70672?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDU2fHx1c2VyfGVufDB8fHx8MTY3MjI1MzQ2OA&amp;ixlib=rb-4.0.3&amp;w=400"
+                    class="inicio-image3"
+                  />
+                  <a href="/usuario" class="inicio-link3 button">
+                    <span>
+                      <span class="inicio-text10">Gestión de Usuario</span>
+                      <br />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+  </body>
+</html>

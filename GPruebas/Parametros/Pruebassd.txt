@@ -1,0 +1,23 @@
+4
+https://saia2.psm.edu.ve/login/index.php
+Pruebassd
+Prueba HDTP
+Una prueba hije pute
+ input text
+Input Text
+username
+yoseph
+ input password
+Input Password
+password
+clave
+ input checkbox
+Click Element
+rememberusername
+ 
+button submit
+Input Text
+loginbtn
+
+Page Should Contain
+" Las Cookies deben estar habilitadas en su navegador"

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20230117 11:10:17.661" rpa="false" schemaversion="3">
+<suite id="s1" name="PruebaAutem" source="C:\Users\USUARIO\OneDrive\Escritorio\flask\GPruebas\Tests\PruebaAutem.robot">
+<test id="s1-t1" name="una prueba a la pagina autem" line="7">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230117 11:10:17.948" level="INFO">Opening browser 'Chrome' to base url 'https://autem.cl'.</msg>
+<status status="PASS" starttime="20230117 11:10:17.947" endtime="20230117 11:10:36.615"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_0</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230117 11:10:36.616" endtime="20230117 11:10:36.643"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_0</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230117 11:10:36.643" endtime="20230117 11:10:36.659"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_0</arg>
+<arg>xxx</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230117 11:10:36.660" level="INFO">Typing text 'xxx' into text field 'id:wpforms-110-field_0'.</msg>
+<status status="PASS" starttime="20230117 11:10:36.660" endtime="20230117 11:10:36.732"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_0-last</arg>
+<arg>xxx</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230117 11:10:36.733" level="INFO">Typing text 'xxx' into text field 'id:wpforms-110-field_0-last'.</msg>
+<status status="PASS" starttime="20230117 11:10:36.732" endtime="20230117 11:10:36.826"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_1</arg>
+<arg>1@2.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230117 11:10:36.827" level="INFO">Typing text '1@2.com' into text field 'id:wpforms-110-field_1'.</msg>
+<status status="PASS" starttime="20230117 11:10:36.827" endtime="20230117 11:10:36.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_3</arg>
+<arg>123456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230117 11:10:36.927" level="INFO">Typing text '123456789' into text field 'id:wpforms-110-field_3'.</msg>
+<status status="PASS" starttime="20230117 11:10:36.926" endtime="20230117 11:10:37.039"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_5</arg>
+<arg>cualquiera</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230117 11:10:37.040" level="INFO">Typing text 'cualquiera' into text field 'id:wpforms-110-field_5'.</msg>
+<status status="PASS" starttime="20230117 11:10:37.039" endtime="20230117 11:10:37.138"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id:wpforms-110-field_2</arg>
+<arg>Servicio de Ingeniería</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230117 11:10:37.139" level="INFO">Selecting options from selection list 'id:wpforms-110-field_2' by label Servicio de Ingeniería.</msg>
+<msg timestamp="20230117 11:10:37.272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230117 11:10:37.273" level="FAIL">List with locator 'id:wpforms-110-field_2' not found.</msg>
+<status status="FAIL" starttime="20230117 11:10:37.138" endtime="20230117 11:10:37.317"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dirección</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230117 11:10:37.318" endtime="20230117 11:10:37.318"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230117 11:10:37.319" endtime="20230117 11:10:37.319"/>
+</kw>
+<doc>una prueba a la pagina autem</doc>
+<status status="FAIL" starttime="20230117 11:10:17.944" endtime="20230117 11:10:37.320">List with locator 'id:wpforms-110-field_2' not found.</status>
+</test>
+<doc>prueba de autem</doc>
+<status status="FAIL" starttime="20230117 11:10:17.661" endtime="20230117 11:10:37.322"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="PruebaAutem">PruebaAutem</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
